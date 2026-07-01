@@ -1,0 +1,28 @@
+void main(){
+  List<String> subjects = ['Calculus', 'Physics', 'Intro to Programming'];
+  print('Number of subjects: ${subjects.length}');
+  print('First subject: ${subjects[0]}');
+  print('Last subject: ${subjects[subjects.length-1]}');
+  subjects.add('English');
+  print({subjects});
+  
+  Map<String,int> studentScores ={
+    'Calculus': 90,'English': 85
+  };
+  print('Score for Cal: ${studentScores['Calculus']}');
+  studentScores['Physics'] = 70;
+  print('Updated studentScore: $studentScores');
+  
+  studentScores.forEach((key, value){
+    if (key.toLowerCase().contains('a')){
+      print('คะแนนที่ชื่อวิชามีตัว  a วิชา: $key | คะแนน: $value');
+    }
+  });
+  
+  studentScores.forEach((key, value){
+    if (value > 50){
+      print('วิชาที่มีคะแนนมากกว่า 50 คะแนน วิชา: $key | คะแนน: $value');
+    }
+  });
+
+}
